@@ -1,11 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Contacts</title>
+
+  <link rel="stylesheet" href="css/contacts.css">
 </head>
+
 <body>
 
-  <h1>Welcome to the Contact Dashboard</h1>
+  <div class="container">
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+      <div>
+        <h1>My Contacts</h1>
+        <p>Manage your personal contact book</p>
+      </div>
+
+      <button class="logout-btn" onclick="logout()">
+        Logout
+      </button>
+
+    </div>
+
+    <!-- SEARCH -->
+
+    <div class="search-section">
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search contacts..."
+      >
+
+    </div>
+
+    <!-- CONTACT LIST -->
+
+    <div id="contactList" class="contact-grid"></div>
+
+    <!-- ADD CONTACT -->
+
+    <div class="add-contact-section">
+
+      <h2>Add New Contact</h2>
+
+      <div class="form-grid">
+
+        <input type="text" id="firstName" placeholder="First Name">
+
+        <input type="text" id="lastName" placeholder="Last Name">
+
+        <input type="text" id="phone" placeholder="Phone Number">
+
+        <input type="email" id="email" placeholder="Email">
+
+      </div>
+
+      <button class="add-btn" onclick="addContact()">
+        Add Contact
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="js/contacts.js"></script>
 
 </body>
 </html>
