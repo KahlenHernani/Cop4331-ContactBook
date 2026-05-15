@@ -178,7 +178,6 @@ function addContact()
   document.getElementById("phone").value = "";
   document.getElementById("email").value = "";
 
-  alert("Contact Added!");
 }
 
 /*
@@ -187,6 +186,14 @@ function addContact()
 
 function deleteContact(id)
 {
+  const confirmDelete =
+    confirm("Are you sure you want to delete this contact?");
+
+  if(!confirmDelete)
+  {
+    return;
+  }
+
   contacts =
     contacts.filter(contact =>
       contact.id !== id
